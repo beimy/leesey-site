@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
+import { SiteProvider } from './utils/GlobalState';
 
 import Home from './pages/Home';
 
@@ -28,12 +29,17 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Routes>
-          <Route 
-            path='/'
-            element={<Home />}
-          />
-        </Routes>
+        <div>
+          <SiteProvider>
+            {/* <Nav /> */}
+            <Routes>
+              <Route 
+                path='/'
+                element={<Home />}
+              />
+            </Routes>
+          </SiteProvider>
+        </div>
       </Router>
     </ApolloProvider>
   );

@@ -1,11 +1,14 @@
-import React, { Fragment } from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { Fragment, useEffect } from 'react';
+// import WrapperMap from '../components/WrapperMap.tsx';
+
 
 const Home = () => {
+
     return (
-        <Fragment>
-            <h1>Hello There</h1>
-        </Fragment>
+        <div>
+            
+        </div>
+        
     )
 };
 
