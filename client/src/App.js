@@ -5,6 +5,7 @@ import { setContext } from '@apollo/client/link/context';
 import { SiteProvider } from './utils/GlobalState';
 
 import Home from './pages/Home';
+import Nav from './components/Nav/index.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -29,9 +30,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className='flex justify-center'>
+        <div className=''>
           <SiteProvider>
-            {/* <Nav /> */}
+            <Nav />
             <Routes>
               <Route 
                 path='/'
