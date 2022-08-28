@@ -7,6 +7,7 @@ import { SiteProvider } from './utils/GlobalState';
 import Home from './pages/Home';
 import Nav from './components/Nav/index.tsx';
 import RecipePage from './pages/Recipes.tsx';
+import SubmissionPage from './pages/Submissions.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,6 +43,10 @@ function App() {
               <Route 
                 path='/cocktails'
                 element={<RecipePage />}
+              />
+              <Route 
+                path='/submit'
+                element={<SubmissionPage />}
               />
             </Routes>
           </SiteProvider>

@@ -18,4 +18,12 @@
     .link-sect-btn p {
         @apply text-sm
     }
+
+    .input-field {
+        @apply border border-black mb-2
+    }
+
+    .input-label {
+        @apply font-bold
+    }
 }
