@@ -6,6 +6,7 @@ import { SiteProvider } from './utils/GlobalState';
 
 import Home from './pages/Home';
 import Nav from './components/Nav/index.tsx';
+import RecipePage from './pages/Recipes.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -30,13 +31,17 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className=''>
+        <div>
           <SiteProvider>
             <Nav />
             <Routes>
               <Route 
                 path='/'
                 element={<Home />}
+              />
+              <Route 
+                path='/cocktails'
+                element={<RecipePage />}
               />
             </Routes>
           </SiteProvider>
