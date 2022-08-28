@@ -29,7 +29,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div>
+        <div className='flex justify-center'>
           <SiteProvider>
             {/* <Nav /> */}
             <Routes>
