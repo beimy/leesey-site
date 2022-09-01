@@ -20,10 +20,14 @@
     }
 
     .input-field {
-        @apply border border-black mb-2
+        @apply border border-black mb-2 rounded shadow-md pl-2 w-full
     }
 
     .input-label {
         @apply font-bold
+    }
+
+    .alpha-btn {
+        @apply border-b border-blue-500 mx-1 text-blue-500
     }
 }
