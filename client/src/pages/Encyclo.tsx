@@ -1,10 +1,18 @@
 import React, { FC, useState } from "react";
 import { Listbox, Transition } from '@headlessui/react';
 import { SelectorIcon } from '@heroicons/react/solid';
+import IngredientCard from '../components/IngredientCard/index.tsx';
 
 interface EncycloProps {
 
-}
+};
+
+const fakerData = [
+    {id: 1, img: 'Test', name: 'Test Name', sciName: 'Test SciName', region: 'Test Region', season: 'Test Season'},
+    {id: 2, img: 'Test', name: 'Test Name', sciName: 'Test SciName', region: 'Test Region', season: 'Test Season'},
+    {id: 3, img: 'Test', name: 'Test Name', sciName: 'Test SciName', region: 'Test Region', season: 'Test Season'},
+    {id: 4, img: 'Test', name: 'Test Name', sciName: 'Test SciName', region: 'Test Region', season: 'Test Season'},
+]
 
 const filters = [
     {id: 1, param: 'Browse'},
@@ -54,7 +62,7 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                     <input type='text' id="search-field" className=" mt-2 input-field h-1/2" placeholder="e.g. Rosemary"></input>
                 </div>
             </div>
-            <div id='browse-alpha'>
+            <div id='browse-alpha' className="flex w-full flex-wrap justify-evenly my-2">
                 {alphabet.map((letter) => (
                     <button
                         id={`${letter}`}
@@ -62,7 +70,19 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                         className='alpha-btn'    
                     >{letter}
                     </button>
-                ))};
+                ))}
+            </div>
+            <div id="results-sect" className="flex flex-wrap justify-between mt-5">
+                {fakerData.map((item) => (
+                    <IngredientCard
+                        key={item.id}
+                        img={item.img}
+                        name={item.name}
+                        sciName={item.sciName}    
+                        region={item.region}
+                        season={item.season}
+                    />
+                ))}
             </div>
         </div>
     )

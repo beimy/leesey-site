@@ -28,6 +28,6 @@
     }
 
     .alpha-btn {
-        @apply border-b border-blue-500 mx-1 text-blue-500
+        @apply border-b border-blue-500 mx-2 text-blue-500 
     }
 }
