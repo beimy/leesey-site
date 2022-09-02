@@ -9,6 +9,7 @@ import Nav from './components/Nav/index.tsx';
 import RecipePage from './pages/Recipes.tsx';
 import SubmissionPage from './pages/Submissions.tsx';
 import EncycloPage from './pages/Encyclo.tsx';
+import ReferencesPage from './pages/References.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,6 +53,10 @@ function App() {
               <Route 
                 path='/encyclopedia'
                 element={<EncycloPage />}
+              />
+              <Route 
+                path='/references'
+                element={<ReferencesPage />}
               />
             </Routes>
           </SiteProvider>
