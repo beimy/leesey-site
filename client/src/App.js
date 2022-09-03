@@ -10,6 +10,7 @@ import RecipePage from './pages/Recipes.tsx';
 import SubmissionPage from './pages/Submissions.tsx';
 import EncycloPage from './pages/Encyclo.tsx';
 import ReferencesPage from './pages/References.tsx';
+import TestPage from './pages/TestPage.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -57,6 +58,10 @@ function App() {
               <Route 
                 path='/references'
                 element={<ReferencesPage />}
+              />
+               <Route 
+                path='/test'
+                element={<TestPage />}
               />
             </Routes>
           </SiteProvider>

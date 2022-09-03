@@ -82,7 +82,6 @@ window.env = {
   "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
   "PUBLIC": "C:\\Users\\Public",
   "PWD": "D:/projects/foraging/client",
-  "REACT_APP_GOOGLE_API_KEY": "AIzaSyC8mqj2one7VHKz7fR92Cy689CVWv4CehI",
   "SESSIONNAME": "Console",
   "SHELL": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
   "SHLVL": "4",
