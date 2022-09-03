@@ -19,7 +19,7 @@ const SubmissionPage: FC<SubmissionProps> = ({}) => {
                 <label className="input-label">Flavor Profile</label>
                 <textarea id='flavors' className='input-field' rows={5}></textarea>
                 <label className="input-label">Picture</label>
-                <input type='file' id='picture' className='mb-2' rows={5}></input>
+                <input type='file' id='picture' className='mb-2'></input>
                 <label className="input-label">Inspiration</label>
                 <textarea id='inspiration' className='input-field' rows={5}></textarea>
                 <input type='submit' className=" self-end px-2 w-fit border border-black p-1 bg-green-600 rounded"></input>

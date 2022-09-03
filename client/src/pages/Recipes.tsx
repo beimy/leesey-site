@@ -1,6 +1,7 @@
 import React, {FC, useState} from "react";
 import Recipe from '../components/Recipe/index.tsx';
 import { Listbox } from '@headlessui/react';
+import { Link } from 'react-router-dom';
 
 
 interface RecipePageProps {
@@ -31,7 +32,7 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
             <div id="submission-sect" className="w-screen p-2 flex-col">
                 <h2 className="text-xl">Want to submit a cocktail of your own?</h2>
                 <p className="pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, beatae id? Ad aliquid mollitia sed laudantium facere dicta! Quod, adipisci possimus debitis magnam porro et a totam error nesciunt quas.</p>
-                <button className="btn w-fit px-2 float-right">Submit</button>
+                <Link to='/submit' replace={true} className="btn w-fit px-2 float-right">Submit</Link>
             </div>
             <div id="recipe-list" className="p-2">
                 <div id="search-filter-section" className="flex justify-between">
