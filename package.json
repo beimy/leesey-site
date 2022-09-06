@@ -12,6 +12,7 @@
     "start": "node server/server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i --force && cd ../client && npm i --force"
   },
