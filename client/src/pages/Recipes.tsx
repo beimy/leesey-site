@@ -22,7 +22,7 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
             <article className="bg-slate-200 w-screen p-2 flex justify-center">
                 <div className="w-1/2 p-2">
                     <h2>Cocktail of the Week</h2>
-                    <img src={require(`../assets/lorempic1.jpg`)}/>
+                    <img src={require(`../assets/lorempic1.jpg`)} alt='Cocktail of The Week'/>
                 </div>
                 <div className="w-1/2 p-2">
                     <h3 className="border-b border-black">The Rum-Spriggian</h3>

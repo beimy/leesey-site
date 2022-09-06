@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
-import { Listbox, Transition } from '@headlessui/react';
-import { SelectorIcon } from '@heroicons/react/solid';
+import { Listbox } from '@headlessui/react';
+// import { SelectorIcon } from '@heroicons/react/solid';
 import IngredientCard from '../components/IngredientCard/index.tsx';
 
 interface EncycloProps {
