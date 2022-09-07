@@ -5,9 +5,9 @@ const Home = () => {
 
     return (
         <div className='flex flex-col justify-center'>
-            <article id='hero' className=' bg-slate-200 h-screen w-screen p-2 flex justify-center flex-col'>
-                <h1 className='text-2xl self-center pb-10'>Welcome to <span className=' text-green-600'>Foraging Friend</span></h1>
-                <p className=' '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
+            <article id='hero' className='hero h-screen flex-col'>
+                <h1 className='text-2xl self-center pb-10'>Welcome to <span className=' text-red-accent'>Foraging Friend</span></h1>
+                <p className='mb-10 px-5 text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
                 <div className='flex flex-wrap justify-around'>
                     <Link to='/cocktails' className='flex hero-btn btn justify-center'>
                         <span className='self-center'>Recipes</span>
@@ -18,18 +18,17 @@ const Home = () => {
                     </Link>
                 </div>
             </article>
-            <div id='about-us-sect' className='w-screen p-2 flex justify-center flex-col'>
-                <span className='text-green-600 text-2xl'>A little about us 
-                    <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
-                </span>                
+
+            <div id='about-us-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
+                <span className='section-header mb-1'>A Little About Us</span>                
+                <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
             </div>
-            <div id='do-dont-sect' className='w-screen p-2 flex justify-center flex-col'>
-                <span className='text-green-600 text-2xl inline-block'>Do's and Don'ts
-                    <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
-                </span> 
+            <div id='do-dont-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
+                <span className='section-header mb-1'>Do's and Don'ts</span> 
+                <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
                 <Link to='references' className='btn self-end inline-block'>More Info</Link>
             </div>
-            <div id='link-sect' className='w-screen p-2 flex justify-center flex-col'>
+            <div id='link-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
                 <Link to='/cocktails' className='link-sect-btn'>Cocktail Recipes 
                     <p>Check out our library of locally foraged cocktails submitted by our users. All of the recipes have been checked to ensure saftey, and deliciousness!</p>    
                 </Link>
