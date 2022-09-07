@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
@@ -32,6 +32,11 @@ const client = new ApolloClient({
 });
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Foraging Friend'
+  });
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -40,7 +45,7 @@ function App() {
             <Nav />
             <Routes>
               <Route 
-                path='/'
+                path='/foraging-site'
                 element={<Home />}
               />
               <Route 
