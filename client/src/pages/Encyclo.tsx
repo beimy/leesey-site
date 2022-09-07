@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { Listbox } from '@headlessui/react';
 // import { SelectorIcon } from '@heroicons/react/solid';
 import IngredientCard from '../components/IngredientCard/index.tsx';
@@ -32,16 +32,16 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
         <div className="p-2">
             <h1 className="section-header my-2">Encyclopedia</h1>
             <div id="disclaimer" className="my-6 pb-20 border-b h-fit">
-                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab recusandae optio temporibus? Ducimus vitae reprehenderit beatae maiores quia, unde nisi molestiae, odit provident corporis minus doloribus veniam itaque? Similique.</span>
+                <span className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab recusandae optio temporibus? Ducimus vitae reprehenderit beatae maiores quia, unde nisi molestiae, odit provident corporis minus doloribus veniam itaque? Similique.</span>
                 <button className="btn float-right">Learn More</button>
             </div>
 
-            <div id="search-sect" className="flex my-10 ">
+            <div id="search-sect" className="flex mt-10 ">
                 <Listbox value={selectedFilter} onChange={setSelectedFilter}>
                     <div>
                         <Listbox.Label className='py-2 m-1 text-sm'>Search by:</Listbox.Label>
-                        <div className="relative mt-1">
-                            <Listbox.Button className='relative w-full cursor-default bg-warm-white border-b pt-2 pl-1 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
+                        <div className="relative mt-2">
+                            <Listbox.Button className='relative w-full cursor-default bg-warm-white border-b py-1 pl-1 pr-10 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
                                 <span className="block truncate">{selectedFilter.param}</span>     
                             </Listbox.Button>
                             <Listbox.Options className='absolute w-fit pr-8 bg-true-grey'>
@@ -58,22 +58,26 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                         </div>
                     </div>
                 </Listbox>
-                <div className="mx-1">
-                    <label className="m-1 text-sm">Search:</label>
-                    <input type='text' id="search-field" className=" mt-2 input-field h-1/2" placeholder="e.g. Rosemary"></input>
+                {selectedFilter.id != 1 &&
+                    <div className="mx-1">
+                        <label className="m-1 text-sm">Search:</label>
+                        <input type='text' id="search-field" className="mt-2 input-field h-1/2" placeholder="e.g. Rosemary"></input>
+                    </div>
+                }
+            </div>
+            {selectedFilter.id == 1 &&
+                <div id='browse-alpha' className="flex w-full flex-wrap justify-evenly my-2">
+                    {alphabet.map((letter) => (
+                        <button
+                            id={`${letter}`}
+                            key={letter}
+                            className='alpha-btn'    
+                        >{letter}
+                        </button>
+                    ))}
                 </div>
-            </div>
-            <div id='browse-alpha' className="flex w-full flex-wrap justify-evenly my-2">
-                {alphabet.map((letter) => (
-                    <button
-                        id={`${letter}`}
-                        key={letter}
-                        className='alpha-btn'    
-                    >{letter}
-                    </button>
-                ))}
-            </div>
-            <div id="results-sect" className="flex flex-wrap justify-between mt-5">
+            }
+            <div id="results-sect" className="flex flex-wrap justify-between my-10">
                 {fakerData.map((item) => (
                     <IngredientCard
                         key={item.id}

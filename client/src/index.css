@@ -20,19 +20,19 @@
     }
 
     .section-header {
-        @apply inline-block w-fit text-sage-green text-2xl border-b border-sage-green
+        @apply inline-block w-fit text-deep-green text-3xl border-b border-sage-green
     }
     
     .link-sect-btn {
-        @apply bg-sage-green  border border-black my-5  text-left px-2 py-1 text-lg
+        @apply bg-sage-green  border border-black my-5 shadow-lg text-left px-2 py-1 text-lg
     }
 
     .link-sect-btn p {
-        @apply text-sm
+        @apply text-sm py-2
     }
 
     .input-field {
-        @apply border border-black mb-2 rounded shadow-md pl-2 w-full
+        @apply border-b border-black mb-2 bg-warm-white shadow-md pl-2 w-full
     }
 
     .input-label {
@@ -40,14 +40,18 @@
     }
 
     .alpha-btn {
-        @apply border-b mx-2 
+        @apply border-b mx-2 text-red-accent
     }
 
     .card-label {
-        @apply text-red-accent
+        @apply text-deep-green
     }
 
     .card-text {
-        @apply text-black
+        @apply text-dark-grey
+    }
+
+    .cocktail-card {
+        @apply flex flex-col border shadow-md bg-sage-green border-black p-2 rounded flex-[0_1_48%] my-2
     }
 }

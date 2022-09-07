@@ -19,19 +19,19 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <article className="hero p-2 py-10 flex justify-center">
-                <div className="w-1/2 p-2">
-                    <h2 className="section-header">Cocktail of the Week</h2>
-                    <img src={require(`../assets/lorempic1.jpg`)} alt='Cocktail of The Week'/>
-                </div>
-                <div className="w-1/2 h-4/6 p-2 self-center">
-                    <h3 className="border-b border-black text-red-accent">The Rum-Spriggian</h3>
-                    <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis autem quisquam minima officiis ex odit repudiandae id est. Doloremque nam praesentium dolore debitis alias dolorem, itaque eius porro officia.</p>
+            <article className="hero p-2 py-5 flex flex-col justify-center">
+                <h2 className="p-2 section-header border-0">Cocktail of the Week</h2>
+                <div className="p-2 flex">
+                    <img src={require(`../assets/lorempic1.jpg`)} alt='Cocktail of The Week' className="py-2 max-w-[50%]"/>
+                    <div className="w-1/2 px-2 pb-2 self-center">
+                        <h3 className="border-b border-black text-red-accent text-xl">The Rum-Spriggian</h3>
+                        <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis autem quisquam minima officiis ex odit repudiandae id est. Doloremque nam praesentium dolore debitis alias dolorem, itaque eius porro officia.</p>
+                    </div>
                 </div>
             </article>
 
             <div id="submission-sect" className="w-screen my-10 p-2 flex-col">
-                <h2 className="text-xl text-sage-green">Want To Submit A Cocktail Of Your Own?</h2>
+                <h2 className="text-2xl text-deep-green">Want To Submit A Cocktail Of Your Own?</h2>
                 <p className="pt-6 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias, beatae id? Ad aliquid mollitia sed laudantium facere dicta! Quod, adipisci possimus debitis magnam porro et a totam error nesciunt quas.</p>
                 <Link to='/submit' replace={true} className="btn w-fit px-2 float-right">Submit</Link>
             </div>

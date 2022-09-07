@@ -18,7 +18,9 @@ module.exports = {
       'dark-grey': '#67695e',
       'red-accent': '#8f665d',
       'taupe': '#f1e7cb',
-      'warm-white': '#f4f1eb'
+      'warm-white': '#f4f1eb',
+      'deep-green': '#2f360d',
+      
     },
     extend: {},
   },

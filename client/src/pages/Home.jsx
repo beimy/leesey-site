@@ -6,8 +6,8 @@ const Home = () => {
     return (
         <div className='flex flex-col justify-center'>
             <article id='hero' className='hero h-screen flex-col'>
-                <h1 className='text-2xl self-center pb-10'>Welcome to <span className=' text-red-accent'>Foraging Friend</span></h1>
-                <p className='mb-10 px-5 text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
+                <h1 className='text-2xl self-center pb-10'><span className=' text-red-accent'>Foraging Friend</span></h1>
+                <p className='mb-10 px-5 text-center text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
                 <div className='flex flex-wrap justify-around'>
                     <Link to='/cocktails' className='flex hero-btn btn justify-center'>
                         <span className='self-center'>Recipes</span>
@@ -29,13 +29,16 @@ const Home = () => {
                 <Link to='references' className='btn self-end inline-block'>More Info</Link>
             </div>
             <div id='link-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
-                <Link to='/cocktails' className='link-sect-btn'>Cocktail Recipes 
+                <Link to='/cocktails' className='link-sect-btn'>
+                    <h3 className='text-warm-white border-b inline-block'>Cocktail Recipes</h3> 
                     <p>Check out our library of locally foraged cocktails submitted by our users. All of the recipes have been checked to ensure saftey, and deliciousness!</p>    
                 </Link>
-                <Link to='/encyclopedia' className='link-sect-btn'>Ingredient Encyclopedia
+                <Link to='/encyclopedia' className='link-sect-btn'>
+                    <h3 className='text-warm-white border-b inline-block'>Ingredient Encyclopedia</h3>
                     <p>Search for inspiration in our foraging Encyclopedia. Find everything from herbs, mushrooms, fruits and vegitables in your local area.</p>    
                 </Link>
-                <Link to='/references' className='link-sect-btn'>References 
+                <Link to='/references' className='link-sect-btn'>
+                    <h3 className='text-warm-white border-b inline-block'>References</h3> 
                     <p>Looking for more info on cocktails or foraging? Check out some of our helpful references here.</p>
                 </Link>
             </div>

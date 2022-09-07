@@ -12,9 +12,9 @@ interface NavProps {
 
 const Nav: FC<NavProps> = ({}) => {
     return (
-        <Menu as="div" className="relative flex text-left p-2 justify-between bg-true-grey shadow-md">
+        <Menu as="div" className="relative flex text-left p-2 justify-between bg-deep-green shadow-md">
           <div className=''>
-            <Menu.Button className="inline-flex justify-center w-full shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
+            <Menu.Button className="inline-flex text-warm-white justify-center w-full shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
               Options
             </Menu.Button>
           </div>
@@ -85,7 +85,7 @@ const Nav: FC<NavProps> = ({}) => {
               </div>
             </Menu.Items>
           </Transition>
-          <button className='inline-flex justify-center w-fit shadow-sm px-4 py-2  text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent'>Sign Up</button>
+          <button className='inline-flex text-warm-white justify-center w-fit shadow-sm px-4 py-2  text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent'>Sign Up</button>
         </Menu>
       )
 };

@@ -18,7 +18,7 @@ const Recipe: FC<RecipeProps> = ({}) => {
                     <p className="card-label">Creator: <span className="card-text">Test McTester</span></p>
                     <p className="card-label">Main Spirit: <span className="card-text">Whisky</span></p>
                 </div>
-                <a className="text-red-accent self-end border-b border-red-accent">Full Cocktail</a>
+                <a className="text-warm-white self-end border-b border-red-accent">Full Cocktail</a>
             </div>
         </div>
     );
