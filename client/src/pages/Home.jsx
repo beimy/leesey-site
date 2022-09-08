@@ -26,7 +26,7 @@ const Home = () => {
             <div id='do-dont-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
                 <span className='section-header mb-1'>Do's and Don'ts</span> 
                 <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
-                <Link to='references' className='btn self-end inline-block'>More Info</Link>
+                <Link to='/references' className='btn self-end inline-block'>More Info</Link>
             </div>
             <div id='link-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
                 <Link to='/cocktails' className='link-sect-btn'>
