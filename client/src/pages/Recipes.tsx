@@ -1,8 +1,9 @@
 import React, {FC, useState} from "react";
-import Recipe from '../components/Recipe/index.tsx';
-import { Listbox } from '@headlessui/react';
 import { Link } from 'react-router-dom';
-
+import { Listbox } from '@headlessui/react';
+import { useSiteContext } from '../utils/GlobalState';
+import { TOGGLE_ERROR_MODAL } from "../utils/actions";
+import Recipe from '../components/Recipe/index.tsx';
 
 interface RecipePageProps {
 
@@ -16,6 +17,11 @@ const sortOptions = [
 const RecipePage: FC<RecipePageProps> = ({}) => {
 
     const [selectedSort, setSelectedSort] = useState(sortOptions[0]);
+    const [state, dispatch] = useSiteContext();
+
+    function toggleErrorModal() {
+        dispatch({type: TOGGLE_ERROR_MODAL});
+    };
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -39,11 +45,11 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
             <div id="recipe-list" className="p-2 pb-10">
                 <h2 className="section-header mb-4">Browse Cocktails</h2>
                 <div id="search-filter-section" className="flex justify-between my-2">
-                    <input placeholder="Search" className="border-black border-b bg-warm-white px-2 my-2 mr-2" />
+                    <input placeholder="Search" className="border-black border-b bg-warm-white px-2 my-2 mr-2" onClick={toggleErrorModal} />
                     <Listbox value={selectedSort} onChange={setSelectedSort}>
                         <Listbox.Label>Filter By:</Listbox.Label>
-                        <Listbox.Button className='px-2'>{selectedSort}</Listbox.Button>
-                        <Listbox.Options>
+                        <Listbox.Button className='p-2 h-fit bg-true-grey'>{selectedSort}</Listbox.Button>
+                        <Listbox.Options className='origin-top-left absolute left-0 mt-10 w-20 shadow-lg bg-true-grey ring-1 ring-black ring-opacity-5 focus:outline-none'>
                             {sortOptions.map((option) => (
                                 <Listbox.Option
                                     key={option}

@@ -28,7 +28,7 @@ const MapComp: FC<{}> = ({}) => {
 
     return (
        <LoadScript
-            googleMapsApiKey='AIzaSyC8mqj2one7VHKz7fR92Cy689CVWv4CehI'
+            googleMapsApiKey='AIzaSyDcWPpWpMYL2iXw4cZbxcpngA25ac-YnBw'
        >
         <GoogleMap
             mapContainerStyle={containerStyle}

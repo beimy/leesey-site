@@ -11,6 +11,7 @@ import SubmissionPage from './pages/Submissions.tsx';
 import EncycloPage from './pages/Encyclo.tsx';
 import ReferencesPage from './pages/References.tsx';
 import TestPage from './pages/TestPage.tsx';
+import ErrorModal from './components/ErrorModal/index.tsx';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,6 +44,7 @@ function App() {
         <div>
           <SiteProvider>
             <Nav />
+            <ErrorModal></ErrorModal>
             <Routes>
               <Route 
                 path='/foraging-site'

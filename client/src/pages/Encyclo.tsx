@@ -1,6 +1,8 @@
 import React, { FC, useState, useEffect } from "react";
 import { Listbox } from '@headlessui/react';
 // import { SelectorIcon } from '@heroicons/react/solid';
+import { useSiteContext } from '../utils/GlobalState';
+import { TOGGLE_ERROR_MODAL } from '../utils/actions';
 import IngredientCard from '../components/IngredientCard/index.tsx';
 
 interface EncycloProps {
@@ -27,6 +29,11 @@ const alphabet = [
 
 const EncycloPage: FC<EncycloProps> = ({}) => {
     const [selectedFilter, setSelectedFilter] = useState(filters[0]);
+    const [state, dispatch] = useSiteContext();
+
+    function toggleErrorModal() {
+        dispatch({type: TOGGLE_ERROR_MODAL});
+    };
 
     return (
         <div className="p-2">
@@ -71,7 +78,8 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                         <button
                             id={`${letter}`}
                             key={letter}
-                            className='alpha-btn'    
+                            className='alpha-btn' 
+                            onClick={toggleErrorModal}   
                         >{letter}
                         </button>
                     ))}
