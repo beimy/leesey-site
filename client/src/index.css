@@ -22,6 +22,10 @@
     .section-header {
         @apply inline-block w-fit text-deep-green text-3xl border-b border-sage-green
     }
+
+    .subsection-header {
+        @apply inline-block w-fit text-deep-green text-2xl border-b border-sage-green
+    }
     
     .link-sect-btn {
         @apply bg-sage-green  border border-black my-5 shadow-lg text-left px-2 py-1 text-lg

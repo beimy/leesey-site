@@ -13,6 +13,8 @@ interface NavProps {
 
 };
 
+
+
 const Nav: FC<NavProps> = ({}) => {
 
   const [state, dispatch] = useSiteContext();
@@ -22,12 +24,12 @@ const Nav: FC<NavProps> = ({}) => {
   };
 
   return (
-      <Menu as="div" className="relative flex text-left p-2 justify-between bg-deep-green shadow-md">
-        <div className=''>
-          <Menu.Button className="inline-flex text-warm-white justify-center w-full shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
-            Options
+      <Menu as="div" className="relative flex text-left p-2 justify-between align-middle bg-deep-green shadow-md">
+        
+          <Menu.Button as='img' src={require('../../assets/ff_logo_round-02-modified.png')} alt='Gnome Logo'
+            className="inline-flex text-warm-white justify-center shadow-sm w-[15%] p-1 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
           </Menu.Button>
-        </div>
+        
   
         <Transition
           as={Fragment}
@@ -95,7 +97,7 @@ const Nav: FC<NavProps> = ({}) => {
             </div>
           </Menu.Items>
         </Transition>
-        <button className='inline-flex text-warm-white justify-center w-fit shadow-sm px-4 py-2  text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent'
+        <button className=' text-warm-white justify-center center w-fit shadow-sm px-4 py-2  text-md font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent'
           onClick={() => toggleErrorModal()}
         >
           Sign Up

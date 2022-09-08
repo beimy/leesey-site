@@ -1,4 +1,5 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
+import { Link } from 'react-router-dom';
 
 interface RecipeProps {
     name: string,
@@ -18,7 +19,7 @@ const Recipe: FC<RecipeProps> = ({}) => {
                     <p className="card-label">Creator: <span className="card-text">Test McTester</span></p>
                     <p className="card-label">Main Spirit: <span className="card-text">Whisky</span></p>
                 </div>
-                <a className="text-warm-white self-end border-b border-red-accent">Full Cocktail</a>
+                <Link to='/cocktail' className="text-warm-white self-end border-b border-red-accent">Full Cocktail</Link>
             </div>
         </div>
     );

@@ -10,6 +10,8 @@ import RecipePage from './pages/Recipes.tsx';
 import SubmissionPage from './pages/Submissions.tsx';
 import EncycloPage from './pages/Encyclo.tsx';
 import ReferencesPage from './pages/References.tsx';
+import CocktailSingle from './pages/CocktailSingle.tsx';
+
 import TestPage from './pages/TestPage.tsx';
 import ErrorModal from './components/ErrorModal/index.tsx';
 
@@ -65,6 +67,10 @@ function App() {
               <Route 
                 path='/references'
                 element={<ReferencesPage />}
+              />
+              <Route 
+                path='/cocktail'
+                element={<CocktailSingle />}
               />
                <Route 
                 path='/test'

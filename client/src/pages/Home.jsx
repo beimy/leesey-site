@@ -11,7 +11,8 @@ const Home = () => {
     return (
         <div className='flex flex-col justify-center'>
             <article id='hero' className='hero h-screen flex-col'>
-                <h1 className='text-2xl self-center pb-10'><span className=' text-red-accent'>Foraging Friend</span></h1>
+                <h1 className='self-center pb-5 text-red-accent text-4xl'>Foraging Friend</h1>
+                <img src={require('../assets/ff_logo_round-02-modified.png')} alt='Site Logo Gnome' className='p-4 px-10'/>
                 <p className='mb-10 px-5 text-center text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
                 <div className='flex flex-wrap justify-around'>
                     <Link to='/cocktails' className='flex hero-btn btn justify-center'>

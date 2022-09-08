@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { Listbox } from '@headlessui/react';
 // import { SelectorIcon } from '@heroicons/react/solid';
 import { useSiteContext } from '../utils/GlobalState';
@@ -40,7 +41,7 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
             <h1 className="section-header my-2">Encyclopedia</h1>
             <div id="disclaimer" className="my-6 pb-20 border-b h-fit">
                 <span className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab recusandae optio temporibus? Ducimus vitae reprehenderit beatae maiores quia, unde nisi molestiae, odit provident corporis minus doloribus veniam itaque? Similique.</span>
-                <button className="btn float-right">Learn More</button>
+                <Link to='/references' className="btn float-right">Learn More</Link>
             </div>
 
             <div id="search-sect" className="flex mt-10 ">
