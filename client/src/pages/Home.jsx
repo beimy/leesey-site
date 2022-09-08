@@ -1,7 +1,12 @@
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSiteContext } from '../utils/GlobalState';
+import ErrorModal from '../components/ErrorModal/index.tsx';
+
 
 const Home = () => {
+
+    const [state, dispatch] = useSiteContext();
 
     return (
         <div className='flex flex-col justify-center'>
@@ -42,6 +47,8 @@ const Home = () => {
                     <p>Looking for more info on cocktails or foraging? Check out some of our helpful references here.</p>
                 </Link>
             </div>
+
+            <ErrorModal></ErrorModal>
         </div>
         
     )

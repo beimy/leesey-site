@@ -1,5 +1,6 @@
 import {
-    TEST
+    TEST,
+    TOGGLE_ERROR_MODAL
 } from './actions';
 import { useReducer } from 'react';
 
@@ -9,6 +10,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 test: 'test changed'
+            };
+        case TOGGLE_ERROR_MODAL :
+            return {
+                ...state,
+                errorModalOpen: !state.errorModalOpen
             };
         default: 
             return state;
