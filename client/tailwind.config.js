@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
@@ -20,7 +21,14 @@ module.exports = {
       'taupe': '#f1e7cb',
       'warm-white': '#f4f1eb',
       'deep-green': '#2f360d',
-      
+    },
+    fontFamily: {
+      'sans': ['Helvetica'],
+      'serif': ['Georgia']
+    },
+    screens: {
+      'xs': '320px',
+      ...defaultTheme.screens
     },
     extend: {},
   },

@@ -1,6 +1,9 @@
 import React, { FC, useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { Listbox } from '@headlessui/react';
 // import { SelectorIcon } from '@heroicons/react/solid';
+import { useSiteContext } from '../utils/GlobalState';
+import { TOGGLE_ERROR_MODAL } from '../utils/actions';
 import IngredientCard from '../components/IngredientCard/index.tsx';
 
 interface EncycloProps {
@@ -27,13 +30,20 @@ const alphabet = [
 
 const EncycloPage: FC<EncycloProps> = ({}) => {
     const [selectedFilter, setSelectedFilter] = useState(filters[0]);
+    const [state, dispatch] = useSiteContext();
+
+    function toggleErrorModal() {
+        dispatch({type: TOGGLE_ERROR_MODAL});
+    };
 
     return (
         <div className="p-2">
             <h1 className="section-header my-2">Encyclopedia</h1>
-            <div id="disclaimer" className="my-6 pb-20 border-b h-fit">
-                <span className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab recusandae optio temporibus? Ducimus vitae reprehenderit beatae maiores quia, unde nisi molestiae, odit provident corporis minus doloribus veniam itaque? Similique.</span>
-                <button className="btn float-right">Learn More</button>
+            <div id="disclaimer" className="my-6 pb-14 border-b h-fit">
+                <span className="text-justify">Here you can find info on all sorts of flora. You can use the search bar to search by name, region, or flavors, or just 
+                browse!<br /> <br /> This part of the site is still under construction until we can fill our database with useful info. If you are looking for info for potential ingredients
+                check out some of our reference materials by clicking Learn More.</span>
+                <Link to='/references' className="btn float-right">Learn More</Link>
             </div>
 
             <div id="search-sect" className="flex mt-10 ">
@@ -61,7 +71,7 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                 {selectedFilter.id != 1 &&
                     <div className="mx-1">
                         <label className="m-1 text-sm">Search:</label>
-                        <input type='text' id="search-field" className="mt-2 input-field h-1/2" placeholder="e.g. Rosemary"></input>
+                        <input type='text' id="search-field" className="mt-2 input-field h-1/2" placeholder="e.g. Rosemary" onClick={toggleErrorModal}></input>
                     </div>
                 }
             </div>
@@ -71,7 +81,8 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                         <button
                             id={`${letter}`}
                             key={letter}
-                            className='alpha-btn'    
+                            className='alpha-btn' 
+                            onClick={toggleErrorModal}   
                         >{letter}
                         </button>
                     ))}
