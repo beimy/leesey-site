@@ -34,8 +34,8 @@ const Recipe: FC<RecipeProps> = ({id, cocktailName, region, author, ingredients}
     }
 
     return (
-        <div className="flex p-2 my-4 bg-sage-green">
-            <img src={require(`../../assets/lorempic1.jpg`)} className='w-1/2' />
+        <div className="flex flex-col p-2 my-4 bg-sage-green border border-red-accent">
+            <img src={require(`../../assets/lorempic1.jpg`)} className='p-2 object-contain' />
             <div className="p-1 flex flex-col align-middle justify-between">
                 <div>
                     <p className="card-label">Name: <span className="card-text">{cocktailName}</span></p>

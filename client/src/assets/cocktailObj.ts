@@ -23,7 +23,7 @@ export interface CocktailData {
 }
 
 export const cocktailDB: CocktailData[] = [
-    {id: 1, cocktailName: 'Forged In Sunshine', tagLine: '', author: 'Meghan McCaskill', description: 'A floral berry forward classic martini with a hint of umami on the finish.',
+    {id: 1, cocktailName: 'Forged By Sunshine', tagLine: '', author: 'Meghan McCaskill', description: 'A floral berry forward classic martini with a hint of umami on the finish.',
         region: 'Central/North Florida',
         glassware: 'Martini Glass',
         season: 'Year-Round',

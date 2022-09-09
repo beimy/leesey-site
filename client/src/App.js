@@ -14,6 +14,7 @@ import CocktailSingle from './pages/CocktailSingle.tsx';
 
 import TestPage from './pages/TestPage.tsx';
 import ErrorModal from './components/ErrorModal/index.tsx';
+import ScrollToTop from './components/ScrollToTop';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -47,36 +48,38 @@ function App() {
           <SiteProvider>
             <Nav />
             <ErrorModal></ErrorModal>
-            <Routes>
-              <Route 
-                path='/foraging-site'
-                element={<Home />}
-              />
-              <Route 
-                path='/cocktails'
-                element={<RecipePage />}
-              />
-              <Route 
-                path='/submit'
-                element={<SubmissionPage />}
-              />
-              <Route 
-                path='/encyclopedia'
-                element={<EncycloPage />}
-              />
-              <Route 
-                path='/references'
-                element={<ReferencesPage />}
-              />
-              <Route 
-                path='/cocktail'
-                element={<CocktailSingle />}
-              />
-               <Route 
-                path='/test'
-                element={<TestPage />}
-              />
-            </Routes>
+            <ScrollToTop>
+              <Routes>
+                <Route 
+                  path='/foraging-site'
+                  element={<Home />}
+                  />
+                <Route 
+                  path='/cocktails'
+                  element={<RecipePage />}
+                  />
+                <Route 
+                  path='/submit'
+                  element={<SubmissionPage />}
+                  />
+                <Route 
+                  path='/encyclopedia'
+                  element={<EncycloPage />}
+                  />
+                <Route 
+                  path='/references'
+                  element={<ReferencesPage />}
+                  />
+                <Route 
+                  path='/cocktail'
+                  element={<CocktailSingle />}
+                  />
+                <Route 
+                  path='/test'
+                  element={<TestPage />}
+                  />
+              </Routes>
+            </ScrollToTop>
           </SiteProvider>
         </div>
       </Router>

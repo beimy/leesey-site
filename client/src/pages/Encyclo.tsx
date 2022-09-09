@@ -39,8 +39,10 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
     return (
         <div className="p-2">
             <h1 className="section-header my-2">Encyclopedia</h1>
-            <div id="disclaimer" className="my-6 pb-20 border-b h-fit">
-                <span className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ab recusandae optio temporibus? Ducimus vitae reprehenderit beatae maiores quia, unde nisi molestiae, odit provident corporis minus doloribus veniam itaque? Similique.</span>
+            <div id="disclaimer" className="my-6 pb-14 border-b h-fit">
+                <span className="text-justify">Here you can find info on all sorts of flora. You can use the search bar to search by name, region, or flavors, or just 
+                browse!<br /> <br /> This part of the site is still under construction until we can fill our database with useful info. If you are looking for info for potential ingredients
+                check out some of our reference materials by clicking Learn More.</span>
                 <Link to='/references' className="btn float-right">Learn More</Link>
             </div>
 
@@ -69,7 +71,7 @@ const EncycloPage: FC<EncycloProps> = ({}) => {
                 {selectedFilter.id != 1 &&
                     <div className="mx-1">
                         <label className="m-1 text-sm">Search:</label>
-                        <input type='text' id="search-field" className="mt-2 input-field h-1/2" placeholder="e.g. Rosemary"></input>
+                        <input type='text' id="search-field" className="mt-2 input-field h-1/2" placeholder="e.g. Rosemary" onClick={toggleErrorModal}></input>
                     </div>
                 }
             </div>

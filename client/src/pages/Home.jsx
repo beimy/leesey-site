@@ -10,10 +10,10 @@ const Home = () => {
 
     return (
         <div className='flex flex-col justify-center'>
-            <article id='hero' className='hero h-screen flex-col'>
-                <h1 className='self-center pb-5 text-red-accent text-4xl'>Foraging Friend</h1>
+            <article id='hero' className='hero h-screen min-h-screen flex-col'>
+                <h1 className='self-center pb-5 text-red-accent text-4xl'>Tipsy Gnome</h1>
                 <img src={require('../assets/ff_logo_round-02-modified.png')} alt='Site Logo Gnome' className='p-4 px-10'/>
-                <p className='mb-10 px-5 text-center text-xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quaerat saepe deleniti excepturi culpa, reiciendis praesentium quod eum sit quis quo autem itaque neque! Maiores veritatis rem facilis laboriosam repellat!</p>
+                <p className='mb-10 px-5 text-center text-xl md:text-lg'>Welcome to the world of craft cocktail foraging</p>
                 <div className='flex flex-wrap justify-around'>
                     <Link to='/cocktails' className='flex hero-btn btn justify-center'>
                         <span className='self-center'>Recipes</span>
@@ -27,11 +27,23 @@ const Home = () => {
 
             <div id='about-us-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
                 <span className='section-header mb-1'>A Little About Us</span>                
-                <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
+                <p className='text-black text-base'>Welcome to our site, and to the exploration of the world around us through localized
+                    foraging! This world is filled with a litany of ingredients just waiting to be discovered. Through
+                    this project we aim to prepare you on your expedition out into nature to discover new flavors,
+                    ingredients, and experiences to enhance your creative cocktail journey.</p>
             </div>
             <div id='do-dont-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
                 <span className='section-header mb-1'>Do's and Don'ts</span> 
-                <p className='text-black text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo distinctio amet eaque doloribus pariatur est, modi sit vero eveniet illum qui suscipit quis inventore id quas dolore! Soluta, officiis ab?</p>
+                <p className='my-2 text-xl'>RULE #1: NEVER EAT ANYTHING, WITHOUT BEING ABSOLUTLY POSITIVE YOU KNOW WHAT IT IS!</p>
+                <p className='text-black my-2'>The world of foraging can be a magical experience filled with the joys of finding,
+                    identifying and gathering your own ingredients, it can also be a very dangerous pastime if not
+                    fully equipped with the proper knowledge and practices utilized by experienced foragers.
+                    For some helpful tips, tricks, and reading material click more info.</p>
+                <p className='text-sm italic opacity-50'>Disclaimer: The purpose of this site is to inspire you to get out and experience nature. Please do not use 
+                    this site as a definative source of info, as it's content is user driven and not always verified. We do not 
+                    accept any responsiblity for misidentified finds. Please exercise caution whenever choosing to ingest anything found
+                    in the wild.
+                </p>
                 <Link to='/references' className='btn self-end inline-block'>More Info</Link>
             </div>
             <div id='link-sect' className='w-screen p-2 my-10 flex justify-center flex-col'>
