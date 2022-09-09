@@ -7,7 +7,8 @@ const { Provider } = SiteContext;
 const SiteProvider = ({ value = [], ...props }) => {
     const [state, dispatch] = useProductReducer({
         testAtt: 'test',
-        errorModalOpen: false
+        errorModalOpen: false,
+        display_cocktail: '',
     });
 
     console.log(state);

@@ -1,8 +1,9 @@
 import React, {FC, useState} from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Listbox } from '@headlessui/react';
 import { useSiteContext } from '../utils/GlobalState';
-import { TOGGLE_ERROR_MODAL } from "../utils/actions";
+import { cocktailDB } from '../assets/cocktailObj.ts';
+import { CHANGE_DISPLAY_COCKTAIL, TOGGLE_ERROR_MODAL } from "../utils/actions";
 import Recipe from '../components/Recipe/index.tsx';
 
 interface RecipePageProps {
@@ -18,14 +19,22 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
 
     const [selectedSort, setSelectedSort] = useState(sortOptions[0]);
     const [state, dispatch] = useSiteContext();
+    const navigate = useNavigate();
 
     function toggleErrorModal() {
         dispatch({type: TOGGLE_ERROR_MODAL});
     };
 
+    function handleNavFunc(event, cocktailId) {
+        event?.preventDefault();
+        dispatch({type: CHANGE_DISPLAY_COCKTAIL, new_display_cocktail: cocktailId})
+        navigate("../cocktail", { replace: false});
+        console.log(cocktailId);
+    };
+
     return (
         <div className="flex flex-col min-h-screen">
-            <article className="hero p-2 py-5 flex flex-col justify-center">
+            <article className="hero p-2 py-5 flex flex-col justify-center" id="1" onClick={(e) => handleNavFunc(e, e.currentTarget.id)}>
                 <h2 className="p-2 section-header border-0">Cocktail of the Week</h2>
                 <div className="p-2 flex">
                     <img src={require(`../assets/lorempic1.jpg`)} alt='Cocktail of The Week' className="py-2 max-w-[50%]"/>
@@ -62,9 +71,18 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
                     </Listbox>
                 </div>
                 <div className="flex flex-col my-6 justify-between">
-                    <Recipe />
-                    <Recipe />
-                    <Recipe />
+                    {cocktailDB.map((cocktail) => {
+                        return (
+                            <Recipe
+                                key={cocktail.id}
+                                id={cocktail.id}
+                                cocktailName={cocktail.cocktailName}
+                                region={cocktail.region}
+                                author={cocktail.author}
+                                ingredients={cocktail.ingredients}
+                            ></Recipe>
+                        )
+                    })}
                 </div>
             </div>
         </div>

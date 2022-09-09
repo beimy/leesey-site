@@ -24,7 +24,7 @@
     }
 
     .subsection-header {
-        @apply inline-block w-fit text-deep-green text-2xl border-b border-sage-green
+        @apply inline-block w-fit text-red-accent text-2xl border-b border-sage-green
     }
     
     .link-sect-btn {
