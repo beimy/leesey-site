@@ -23,7 +23,7 @@ const CocktailSingle: FC<({})> = ({}) => {
         });
     };
 
-    const {cocktailName, tagLine, author, description, region, glassware, season, ingredients, instructions, postDate} = currentCocktail;
+    const {cocktailName, tagLine, author, description, region, glassware, season, ingredients, instructions, postDate, image} = currentCocktail;
 
     if(isLoading) {
         return (
@@ -36,7 +36,7 @@ const CocktailSingle: FC<({})> = ({}) => {
     return (
         <div className="flex flex-col min-h-screen px-2 pt-5 pb-10">
             <h1 className="section-header mx-2 mb-8">{cocktailName}</h1>
-            <img src={require('../assets/lorempic2.jpg')} className='px-2'></img>
+            <img src={process.env.PUBLIC_URL + `/images/${image}`} className='px-2'></img>
             {tagLine && <p className="mx-2 opacity-50 italic">{tagLine}</p>}
             <p className="self-end mx-3">By: <span>{author}</span></p>
             <p className="mx-2 mt-5 ">{description}</p>

@@ -1,12 +1,14 @@
-import React, {FC} from 'react';
+import React, {FC, useRef} from 'react';
 import { Menu } from '@headlessui/react';
 import Draggable from 'react-draggable';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 
 const MapMenu: FC<{}> = ({}) => {
+    const nodeRef = useRef(null);
+
     return (
-        <Draggable>
-            <Menu as={'div'} className='absolute inline-block text-left z-50'>
+        <Draggable nodeRef={nodeRef}>
+            <Menu as={'div'} ref={nodeRef} className='absolute inline-block text-left z-50'>
                 <Menu.Button className='inline-flex w-full justify-center rounded-md bg-warm-white px-4 py-2 text-sm font-medium text-dark-grey hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'>
                     Menu
                     <ChevronDownIcon

@@ -25,6 +25,7 @@ export interface CocktailData {
 export const cocktailDB: CocktailData[] = [
     {id: 1, cocktailName: 'Forged By Sunshine', tagLine: '', author: 'Meghan McCaskill', description: 'A floral berry forward classic martini with a hint of umami on the finish.',
         region: 'Central/North Florida',
+        image: 'forged_by_sunshine01.jpg',
         glassware: 'Martini Glass',
         season: 'Year-Round',
         ingredients: [
@@ -43,6 +44,7 @@ export const cocktailDB: CocktailData[] = [
     },
     {id: 2, cocktailName: 'Rose Sip 75', tagLine: '', author: 'Rachel Ford', description: 'Smooth, balanced, and clever, with a hint of effervescence.',
         region: '',
+        image: 'rose_sip75_img01.jpg',
         glassware: 'Champagne Flute',
         season: 'Year-Round',
         ingredients: [
@@ -64,6 +66,7 @@ export const cocktailDB: CocktailData[] = [
     },
     {id: 3, cocktailName: 'The Pirate King', tagLine: 'Named after Elizabeth Swann, of Pirates of the Caribbean.', author: 'Ellen Zachos', description: 'A refreshing yet spicy caribbean style cocktail.',
         region: 'Caribbean',
+        image: 'pirate_king_img01.jpg',
         glassware: 'Rocks Glass',
         season: 'Year-Round',
         ingredients: [
@@ -84,6 +87,7 @@ export const cocktailDB: CocktailData[] = [
     },
     {id: 4, cocktailName: 'The Pumpkin and Carrot Love-In', tagLine: 'Autumn winter cocktail, often served around Halloween.', author: 'Lottie, Muir', description: 'A sweet earthy smokeiness that balanced by citrus.',
         region: 'United Kingdom',
+        image: 'pumpkin_carrot_love_img01.jpg',
         glassware: 'Collins Glass',
         season: 'Autumn',
         ingredients: [

@@ -24,7 +24,7 @@ const Nav: FC<NavProps> = ({}) => {
   };
 
   return (
-      <Menu as="div" className="relative flex text-left p-2 justify-between align-middle bg-deep-green shadow-md">
+      <Menu as="div" className="relative flex text-left p-2 justify-between align-middle bg-deep-green shadow-md z-100">
           <Menu.Button as='img' src={require('../../assets/ff_logo_round-02-modified.png')} alt='Gnome Logo'
             className="inline-flex text-warm-white justify-center shadow-sm w-[15%] p-1 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
           </Menu.Button>
@@ -37,7 +37,7 @@ const Nav: FC<NavProps> = ({}) => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="origin-top-right absolute left-0 mt-10 w-56 shadow-lg bg-warm-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="origin-top-right absolute left-0 mt-10 w-56 z-50 shadow-lg bg-warm-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (

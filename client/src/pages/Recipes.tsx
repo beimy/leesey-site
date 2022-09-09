@@ -38,7 +38,7 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
                 <h2 className="p-2 section-header border-0">Featured Cocktail</h2>
                 <h3 className="inline-block border-b w-fit border-black text-red-accent text-xl mx-2">Forged By Sunshine</h3>
                 <div className="px-2 pb-2">
-                    <img src={require(`../assets/lorempic1.jpg`)} alt='Cocktail of The Week' className="p-2 max-w-[50%] object-contain float-right"/>
+                    <img src={process.env.PUBLIC_URL + `/images/${cocktailDB[0].image}`} alt='Cocktail of The Week' className="p-2 max-w-[50%] object-contain float-right"/>
                     <p className="text-lg pr-1 my-1">Our first featured drink created by site founder Meghan McCaskill. This play on a classic martini is a regional finalist for Bombay Sapphire's 'Most Imaginative Bartender' competition.</p>
                 </div>
             </article>
@@ -74,6 +74,7 @@ const RecipePage: FC<RecipePageProps> = ({}) => {
                             <Recipe
                                 key={cocktail.id}
                                 id={cocktail.id}
+                                image={cocktail.image}
                                 cocktailName={cocktail.cocktailName}
                                 region={cocktail.region}
                                 author={cocktail.author}

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useSiteContext } from "../../utils/GlobalState.js";
 import { CHANGE_DISPLAY_COCKTAIL } from "../../utils/actions.js";
@@ -7,6 +7,7 @@ import { CocktailIngredient, CocktailData } from '../../assets/cocktailObj.js';
 interface RecipeProps {
     cocktailName: string,
     region: string,
+    image: string,
     author: string,
     mainSpirit?: string,
     id: number,
@@ -20,7 +21,7 @@ interface RecipeProps {
     originallyFrom?: string
 };
 
-const Recipe: FC<RecipeProps> = ({id, cocktailName, region, author, ingredients}) => {
+const Recipe: FC<RecipeProps> = ({id, cocktailName, region, author, ingredients, image}) => {
 
     const [state, dispatch] = useSiteContext();
     const mainSpirit = ingredients[0].name;
@@ -31,11 +32,18 @@ const Recipe: FC<RecipeProps> = ({id, cocktailName, region, author, ingredients}
         event?.preventDefault();
         dispatch({type: CHANGE_DISPLAY_COCKTAIL, new_display_cocktail: id});
         navigate("../cocktail", { replace: false});
+    };
+
+    function buildImgRef(imgTitle) {
+        const image = `../../assets/${imgTitle}`;
+        console.log(image)
+        return image;
     }
+
 
     return (
         <div className="flex flex-col p-2 my-4 bg-sage-green border border-red-accent">
-            <img src={require(`../../assets/lorempic1.jpg`)} className='p-2 object-contain' />
+            <img src={process.env.PUBLIC_URL + `/images/${image}`} className='p-2 object-contain' />
             <div className="p-1 flex flex-col align-middle justify-between">
                 <div>
                     <p className="card-label">Name: <span className="card-text">{cocktailName}</span></p>
