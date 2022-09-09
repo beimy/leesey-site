@@ -25,12 +25,9 @@ const Nav: FC<NavProps> = ({}) => {
 
   return (
       <Menu as="div" className="relative flex text-left p-2 justify-between align-middle bg-deep-green shadow-md">
-        
           <Menu.Button as='img' src={require('../../assets/ff_logo_round-02-modified.png')} alt='Gnome Logo'
             className="inline-flex text-warm-white justify-center shadow-sm w-[15%] p-1 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent">
           </Menu.Button>
-        
-  
         <Transition
           as={Fragment}
           enter="transition ease-out duration-100"

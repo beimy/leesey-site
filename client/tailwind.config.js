@@ -22,9 +22,13 @@ module.exports = {
       'warm-white': '#f4f1eb',
       'deep-green': '#2f360d',
     },
+    fontFamily: {
+      'sans': ['Helvetica'],
+      'serif': ['Georgia']
+    },
     screens: {
       'xs': '320px',
-      ...defaultTheme.screens,
+      ...defaultTheme.screens
     },
     extend: {},
   },

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+
+    * {
+        @apply font-sans
+    }
     html {
         @apply bg-warm-white
     }
@@ -20,7 +24,7 @@
     }
 
     .section-header {
-        @apply inline-block w-fit text-deep-green text-3xl border-b border-sage-green
+        @apply inline-block w-fit text-deep-green text-3xl border-b border-sage-green font-serif
     }
 
     .subsection-header {
@@ -29,6 +33,10 @@
     
     .link-sect-btn {
         @apply bg-sage-green  border border-black my-5 shadow-lg text-left px-2 py-1 text-lg
+    }
+
+    .link-sect-btn h3 {
+        @apply text-warm-white border-b inline-block font-serif text-xl
     }
 
     .link-sect-btn p {
