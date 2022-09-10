@@ -1,12 +1,17 @@
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSiteContext } from '../utils/GlobalState';
+import { TOGGLE_ERROR_MODAL } from '../utils/actions';
 import ErrorModal from '../components/ErrorModal/index.tsx';
 
 
 const Home = () => {
 
     const [state, dispatch] = useSiteContext();
+
+    function toggleErrorModal() {
+        dispatch({type: TOGGLE_ERROR_MODAL})
+    }
 
     return (
         <div className='flex flex-col justify-center'>
@@ -18,7 +23,7 @@ const Home = () => {
                     <Link to='/cocktails' className='flex hero-btn btn justify-center'>
                         <span className='self-center'>Recipes</span>
                     </Link>
-                    <button className='hero-btn btn'>Interactive Map</button>
+                    <button onClick={toggleErrorModal} className='hero-btn btn'>Interactive Map</button>
                     <Link to='/encyclopedia' className='flex hero-btn btn justify-center'>
                         <span className='self-center p-1'>Encyclopedia</span>
                     </Link>

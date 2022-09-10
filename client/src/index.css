@@ -66,4 +66,12 @@
     .cocktail-card {
         @apply flex flex-col border shadow-md bg-sage-green border-black p-2 rounded flex-[0_1_48%] my-2
     }
+
+    th {
+        @apply w-1/2 border-b border-black font-serif text-2xl
+    }
+
+    td {
+        @apply text-sm p-2
+    }
 }
