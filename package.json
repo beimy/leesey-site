@@ -1,7 +1,7 @@
 {
-  "name": "foraging",
+  "name": "leesey.psd",
   "version": "1.0.0",
-  "description": "A site for users to find and share foraging locations and cocktail recipes",
+  "description": "",
   "main": "server/server.js",
   "engines": {
     "node": "16.x",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beimy/foraging-site.git"
+    "url": "git+https://github.com/beimy/leesey-site.git"
   },
   "author": "aaron rones",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beimy/foraging-site/issues"
+    "url": "https://github.com/beimy/leesey-site.git"
   },
   "devDependencies": {
     "concurrently": "^7.3.0",

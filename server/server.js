@@ -4,6 +4,8 @@ const { ApolloServer } = require('apollo-server-express');
 
 //add middleware path here
 
+mongoose.set('strictQuery', false);
+
 const {typeDefs, resolvers} = require('./schemas');
 const db = require("./config/connection");
 

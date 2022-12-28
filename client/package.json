@@ -1,8 +1,8 @@
 {
-  "name": "foraging",
+  "name": "leesey-psd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://beimy.github.io/foraging-site",
+  "homepage": "http://beimy.github.io/paintings",
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@googlemaps/typescript-guards": "^2.0.2",

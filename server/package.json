@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "server for foraging website",
+  "description": "",
   "engines": {
     "node": "16.x",
     "npm": "8.x"

@@ -4,15 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { setContext } from '@apollo/client/link/context';
 import { SiteProvider } from './utils/GlobalState';
 
-import Home from './pages/Home';
 import Nav from './components/Nav/index.tsx';
-import RecipePage from './pages/Recipes.tsx';
-import SubmissionPage from './pages/Submissions.tsx';
-import EncycloPage from './pages/Encyclo.tsx';
-import ReferencesPage from './pages/References.tsx';
-import CocktailSingle from './pages/CocktailSingle.tsx';
+import PaintingsPage from './pages/Paintings';
+import DrawingsPage from './pages/Drawings';
+import InfoPage from './pages/Info';
+import CV from './pages/CV';
 
-import TestPage from './pages/TestPage.tsx';
 import ErrorModal from './components/ErrorModal/index.tsx';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -38,7 +35,7 @@ const client = new ApolloClient({
 function App() {
 
   useEffect(() => {
-    document.title = 'Foraging Friend'
+    document.title = 'leesey'
   });
 
   return (
@@ -51,32 +48,20 @@ function App() {
             <ScrollToTop>
               <Routes>
                 <Route 
-                  path='/foraging-site'
-                  element={<Home />}
+                  path='/paintings'
+                  element={<PaintingsPage />}
                   />
-                <Route 
-                  path='/cocktails'
-                  element={<RecipePage />}
+                  <Route 
+                  path='/drawings'
+                  element={<DrawingsPage />}
                   />
-                <Route 
-                  path='/submit'
-                  element={<SubmissionPage />}
+                  <Route 
+                  path='/lowdown'
+                  element={<InfoPage />}
                   />
-                <Route 
-                  path='/encyclopedia'
-                  element={<EncycloPage />}
-                  />
-                <Route 
-                  path='/references'
-                  element={<ReferencesPage />}
-                  />
-                <Route 
-                  path='/cocktail'
-                  element={<CocktailSingle />}
-                  />
-                <Route 
-                  path='/test'
-                  element={<TestPage />}
+                  <Route 
+                  path='/CV'
+                  element={<CV />}
                   />
               </Routes>
             </ScrollToTop>
